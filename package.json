@@ -17,5 +17,10 @@
   "bugs": {
     "url": "https://github.com/midudev/pruebas-tecnicas/issues"
   },
-  "homepage": "https://github.com/midudev/pruebas-tecnicas#readme"
+  "homepage": "https://github.com/midudev/pruebas-tecnicas#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.4.14",
+    "postcss": "^8.4.26",
+    "tailwindcss": "^3.3.3"
+  }
 }
