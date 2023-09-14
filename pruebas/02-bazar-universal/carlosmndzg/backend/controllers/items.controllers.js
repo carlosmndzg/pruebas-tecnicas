@@ -16,19 +16,19 @@ export const getItem = async (req, res) => {
   const id = Number(req.params.id)
   const item = await ItemsModel.getItem({ id })
 
-  if (item === null) {
+  if (item == null) {
     res.status(404).json({
       status: 'fail',
       data: {
         error: `Itm not found with ID: ${id}`
       }
     })
+  } else {
+    res.status(200).json({
+      status: 'success',
+      data: {
+        item
+      }
+    })
   }
-
-  res.status(200).json({
-    status: 'success',
-    data: {
-      item
-    }
-  })
 }

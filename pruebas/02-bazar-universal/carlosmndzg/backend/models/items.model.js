@@ -8,12 +8,14 @@ const items = JSON.parse(fs.readFileSync(itemsPathFile, 'utf-8'))
 
 export class ItemsModel {
   static async getItems({ query }) {
-    const itemsFiltered = items.filter(({ title }) => {
-      const queryLowercased = query.toLowerCase()
-      const titleLowercased = title.toLowerCase()
+    const itemsFiltered = query
+      ? items.filter(({ title }) => {
+          const queryLowercased = query.toLowerCase()
+          const titleLowercased = title.toLowerCase()
 
-      return titleLowercased.includes(queryLowercased)
-    })
+          return titleLowercased.includes(queryLowercased)
+        })
+      : items
 
     return itemsFiltered
   }
