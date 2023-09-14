@@ -6,8 +6,8 @@ const loadEnv = () => {
   const contents = fs.readFileSync(defaultLocation, "utf8");
 
   contents.split("\n").forEach((line) => {
-    const [key, value] = line;
-    process[key] = value;
+    const [key, value] = line.split("=");
+    process.env[key] = value;
   });
 };
 
