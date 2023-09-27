@@ -11,7 +11,7 @@ function Layout() {
   }
 
   return (
-    <div className="min-h-screen bg-stone-50 text-stone-950">
+    <div className="grid min-h-screen grid-rows-[auto_1fr] bg-stone-50 text-stone-950">
       <header className="border-stone-150 flex flex-col items-center justify-center gap-2 border-b px-4 py-6">
         <h1 className="text-xl font-bold">
           <Link to="/" className="hover:underline">

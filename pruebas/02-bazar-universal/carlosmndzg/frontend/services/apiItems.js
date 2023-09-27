@@ -1,4 +1,4 @@
-const API_ENDPOINT = 'http://192.168.1.46:8008/api'
+const API_ENDPOINT = 'http://localhost:8008/api'
 
 export async function getItems({ query = '' }) {
   const res = await fetch(`${API_ENDPOINT}/items?q=${query}`)
