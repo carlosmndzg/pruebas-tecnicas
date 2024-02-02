@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import { formatCurrency, getFirstWords } from '../utils/helpers'
 
 function Item({ item }) {
-  const { id, title, description, price, rating, thumbnail } = item
+  const { id, title, description, price, thumbnail } = item
 
   return (
     <li className="flex pt-8">
@@ -15,7 +15,9 @@ function Item({ item }) {
       </div>
       <div className="space-y-2 pl-8">
         <h2 className="text-xl font-semibold">
-          <Link to={`/items/${id}`}>{title}</Link>
+          <Link to={`/items/${id}`} className="hover:underline">
+            {title}
+          </Link>
         </h2>
         <p>{getFirstWords(description, 15)}</p>
         <p className="text-lg font-semibold">{formatCurrency(price)}</p>

@@ -7,6 +7,8 @@ function ItemsPage() {
   const [searchParams] = useSearchParams()
   const query = searchParams.get('q')
 
+  // return <Rating score={2.8} />
+
   return (
     <div>
       {query && (
